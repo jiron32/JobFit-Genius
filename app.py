@@ -1,13 +1,13 @@
 import streamlit
 from openai import OpenAI
-
+import os
 
 # Title and description 
 streamlit.title("JobFit Genius🪼")
 streamlit.markdown("This app evaluates how well your resume matches a job description. Simply upload your resume, paste the job description, and click the 'Compare' button to see your results.")
 
 #  OpenAI client
-api_key = ("OPENAI_API_KEY")
+api_key = os.getenv("OPENAI_API_KEY")
 client = OpenAI(api_key=api_key)
 
 
